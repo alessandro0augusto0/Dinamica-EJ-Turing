@@ -1,3 +1,4 @@
+// src/app/components/navBar.jsx
 "use client";
 
 import { useState, useEffect } from "react";
@@ -8,23 +9,10 @@ const sections = ["inicio", "sobre", "servicos", "contato"];
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState("inicio");
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
-
-      let currentSection = "inicio";
-      sections.forEach((section) => {
-        const sectionElement = document.getElementById(section);
-        if (sectionElement) {
-          const rect = sectionElement.getBoundingClientRect();
-          if (rect.top <= 100 && rect.bottom >= 100) {
-            currentSection = section;
-          }
-        }
-      });
-      setActiveSection(currentSection);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -54,14 +42,14 @@ const Navbar = () => {
               >
                 <span
                   className={`text-white cursor-pointer transition-colors duration-300 ${
-                    activeSection === section ? "text-yellow-500" : "hover:text-yellow-500"
+                    isScrolled ? "text-yellow-500" : "hover:text-yellow-500"
                   }`}
                 >
                   {section.charAt(0).toUpperCase() + section.slice(1)}
                 </span>
                 <span
                   className={`absolute left-0 bottom-0 h-0.5 bg-yellow-500 transition-all duration-300 ${
-                    activeSection === section ? "w-full" : "w-0 group-hover:w-full"
+                    isScrolled ? "w-full" : "w-0 group-hover:w-full"
                   }`}
                 ></span>
               </a>
