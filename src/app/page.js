@@ -31,45 +31,58 @@ const weekengImages = [
 
 export default function Home() {
   return (
-    <>
+    <div className="w-full min-h-screen overflow-x-hidden">
       <Navbar />
-      {/* Página 1 - Início */}
-      <Main />
-
-      {/* Página 2 - Sobre (Preencher) */}
-      <section id="sobre-1" className="flex items-center justify-center bg-gray-100">
-        <Sobre />
-      </section>
-      <section id="sobre-2" className="flex flex-col items-center justify-center bg-gray-100 py-8">
-        <h2 className="text-3xl font-bold text-yellow-500 mb-8">
-          Venha nos conhecer e faça parte dessa transformação
-        </h2>
-        <Carrossel images={ejTuringImages} />
-      </section>
-      <section id="sobre-2" className="flex items-center justify-center bg-gray-100">
-        <IfSUl />
-      </section>
-      <section id="sobre-3" >
-        <About_Eng />
-      </section>
-      <section id="sobre-4" className="flex flex-col items-center justify-center py-8">
-        <h2 className="text-3xl font-bold text-yellow-500 mb-8">
-          Fotos da WeekEng em parceria com a EJ Turing
-        </h2>
-        <Carrossel images={weekengImages} />
+      
+      {/* Seção Início */}
+      <section id="inicio" className="w-full min-h-screen">
+        <Main />
       </section>
 
-      {/* Página 7 - Serviços */}
-      <section id="servicos">
-        <Services />
+      {/* Seção Sobre */}
+      <section id="sobre" className="w-full bg-gray-100">
+        <div className="w-full max-w-7xl mx-auto px-4 py-16">
+          <Sobre />
+        </div>
+        
+        <div className="w-full max-w-7xl mx-auto px-4 py-16">
+          <h2 className="text-3xl font-bold text-yellow-500 mb-8 text-center">
+            Venha nos conhecer e faça parte dessa transformação
+          </h2>
+          <Carrossel images={ejTuringImages} />
+        </div>
+        
+        <div className="w-full max-w-7xl mx-auto px-4 py-16">
+          <IfSUl />
+        </div>
+        
+        <div className="w-full max-w-7xl mx-auto px-4 py-16">
+          <About_Eng />
+        </div>
+        
+        <div className="w-full max-w-7xl mx-auto px-4 py-16">
+          <h2 className="text-3xl font-bold text-yellow-500 mb-8 text-center">
+            Fotos da WeekEng em parceria com a EJ Turing
+          </h2>
+          <Carrossel images={weekengImages} />
+        </div>
       </section>
 
-      {/* Página 8 - Contato (Preencher) */}
-      <section id="contato" >
-        <Contato />
+      {/* Seção Serviços */}
+      <section id="servicos" className="w-full bg-white">
+        <div className="w-full">
+          <Services />
+        </div>
+      </section>
+
+      {/* Seção Contato */}
+      <section id="contato" className="w-full bg-gray-100">
+        <div className="w-full max-w-7xl mx-auto px-4 py-16">
+          <Contato />
+        </div>
       </section>
 
       <Footer />
-    </>
+    </div>
   );
 }

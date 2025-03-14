@@ -12,56 +12,46 @@ export default function About_Eng() {
   }, []);
 
   return (
-    <main className="flex flex-col items-center justify-center p-8">
-      {/* Título */}
-      <h1 className="text-3xl font-bold text-yellow-500 mb-8">
-        Engenharia de Computação
-      </h1>
+    <section className="section-container bg-[#F3F4F6] !pb-6">
+      <div className="content-wrapper">
+        <h1 className="section-title text-[#0a1f44]">Engenharia de Computação</h1>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div className="card-container bg-white">
+            <div style={{ backgroundColor: '#162E50' }} className="p-3 flex justify-center">
+              <img
+                src="/Eng_branco.png"
+                alt="Logo do Instituto Federal"
+                className="h-14"
+              />
+            </div>
+            <div className="p-4">
+              <p className="text-[#0a1f44]">
+                O curso de Engenharia de Computação do Instituto Federal forma
+                profissionais com sólidos conhecimentos em hardware e software,
+                capacitados para desenvolver e integrar sistemas computacionais.
+              </p>
+            </div>
+          </div>
 
-      {/* Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl">
-        {/* Card 1 */}
-        <div 
-          className="bg-white shadow-lg rounded-lg overflow-hidden"
-          data-aos="fade-up" // Animação de subida
-        >
-          <div style={{ backgroundColor: '#162E50' }} className="p-4 flex justify-center">
-            <img
-              src="/Eng_branco.png"
-              alt="Logo do Instituto Federal"
-              className="h-16"
-            />
-          </div>
-          <div className="p-6 text-gray-700">
-            <p>
-              O curso de Engenharia de Computação do Instituto Federal forma
-              profissionais com sólidos conhecimentos em hardware e software,
-              capacitados para desenvolver e integrar sistemas computacionais.
-            </p>
-          </div>
-        </div>
-
-        {/* Card 2 */}
-        <div 
-          className="bg-white shadow-lg rounded-lg overflow-hidden"
-          data-aos="fade-up" // Animação de subida
-        >
-          <div style={{ backgroundColor: '#162E50' }} className="p-4 flex justify-center">
-            <img
-              src="/EJ.png"
-              alt="Logo EJ Turing"
-              className="h-16"
-            />
-          </div>
-          <div className="p-6 text-gray-700">
-            <p>
-              A EJ Turing agrega muito para o estudante de Engenharia de
-              Computação, proporcionando experiência prática, desenvolvimento
-              profissional e networking.
-            </p>
+          <div className="card-container bg-white">
+            <div style={{ backgroundColor: '#162E50' }} className="p-4 flex justify-center">
+              <img
+                src="/EJ.png"
+                alt="Logo EJ Turing"
+                className="h-16"
+              />
+            </div>
+            <div className="p-4">
+              <p className="text-[#0a1f44]">
+                A EJ Turing agrega muito para o estudante de Engenharia de
+                Computação, proporcionando experiência prática, desenvolvimento
+                profissional e networking.
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </main>
+    </section>
   );
 }

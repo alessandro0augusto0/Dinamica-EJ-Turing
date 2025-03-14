@@ -16,6 +16,22 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+
+      // Detecta qual seção está visível
+      const sectionElements = sections.map(section => ({
+        id: section,
+        element: document.getElementById(section)
+      }));
+
+      const currentSection = sectionElements.find(({ element }) => {
+        if (!element) return false;
+        const rect = element.getBoundingClientRect();
+        return rect.top <= 100 && rect.bottom >= 100;
+      });
+
+      if (currentSection) {
+        setActiveSection(currentSection.id);
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -37,13 +53,12 @@ const Navbar = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <Image src="/logo.png" alt="EJ Turing" width={40} height={40} />
-            <span className="text-white font-bold ml-2">EJ Turing</span>
+            <Image src="/logo.png" alt="EJ Turing" width={60} height={60} />
           </div>
 
           {/* Botão de menu (hamburger) para dispositivos móveis */}
           <button
-            className="md:hidden text-white"
+            className={`md:hidden ${isScrolled ? "text-white" : "text-[#0a1f44]"}`}
             onClick={toggleMenu}
           >
             {/* Muda o ícone do botão com base no estado isMenuOpen */}
@@ -91,15 +106,18 @@ const Navbar = () => {
                 className="relative group transition-all duration-300"
               >
                 <span
-                  className={`text-white cursor-pointer transition-colors duration-300 ${
-                    isScrolled ? "text-yellow-500" : "hover:text-yellow-500"
-                  }`}
+                  className={`cursor-pointer transition-colors duration-300 
+                    ${isScrolled 
+                      ? "text-white hover:text-yellow-500" 
+                      : "text-[#0a1f44] hover:text-yellow-500"
+                    } 
+                    ${activeSection === section ? "text-yellow-500" : ""}`}
                 >
                   {section.charAt(0).toUpperCase() + section.slice(1)}
                 </span>
                 <span
                   className={`absolute left-0 bottom-0 h-0.5 bg-yellow-500 transition-all duration-300 ${
-                    isScrolled ? "w-full" : "w-0 group-hover:w-full"
+                    activeSection === section ? "w-full" : "w-0 group-hover:w-full"
                   }`}
                 ></span>
               </a>
@@ -115,9 +133,9 @@ const Navbar = () => {
             <a
               key={index}
               href={`#${section}`}
-              className={`text-white cursor-pointer transition-colors duration-300 ${
-                activeSection === section ? "text-yellow-500" : "hover:text-yellow-500"
-              }`}
+              className={`cursor-pointer transition-colors duration-300 
+                ${isScrolled ? "text-white" : "text-[#0a1f44]"}
+                ${activeSection === section ? "text-yellow-500" : "hover:text-yellow-500"}`}
             >
               {section.charAt(0).toUpperCase() + section.slice(1)}
             </a>
