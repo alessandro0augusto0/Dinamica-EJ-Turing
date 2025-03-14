@@ -21,7 +21,10 @@ You can start editing the page by modifying `src/app/page.js`. The page auto-upd
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
 ## Our project
+
 Our images used in the project are in the public folder. Each section was created in a component in the 'src/app/components' folder and the main page is in 'src/app/page.js'.
+
+To access the configuration file and the versions of the tools we use, go to 'package-lock.json'
 
 ## Learn More
 
