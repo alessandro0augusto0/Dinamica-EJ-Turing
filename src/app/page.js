@@ -4,6 +4,8 @@ import Main from "./components/main";
 import Services from "./components/services";
 import Footer from "./components/footer";
 import Carrossel from "./components/carrossel";
+import Sobre from "./components/sobre";
+import IfSUl from "./components/if";
 
 const ejTuringImages = [
   "/images/ej-turing/foto1.jpg",
@@ -32,7 +34,7 @@ export default function Home() {
 
       {/* Página 2 - Sobre (Preencher) */}
       <section id="sobre-1" className="min-h-screen flex items-center justify-center bg-gray-100">
-        <p className="text-2xl text-gray-800">Preencher</p>
+        <Sobre/>
       </section>
 
       {/* Página 3 - Carrossel EJ Turing */}
@@ -45,7 +47,7 @@ export default function Home() {
 
       {/* Página 4 - Sobre (Preencher) */}
       <section id="sobre-3" className="min-h-screen flex items-center justify-center bg-gray-100">
-        <p className="text-2xl text-gray-800">Preencher</p>
+        <IfSUl/>
       </section>
 
       {/* Página 5 - Carrossel Weekeng */}
