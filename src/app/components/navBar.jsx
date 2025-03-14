@@ -1,4 +1,3 @@
-// src/app/components/navBar.jsx
 "use client";
 
 import { useState, useEffect } from "react";
@@ -10,17 +9,16 @@ const sections = ["inicio", "sobre", "servicos", "contato"];
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("inicio");
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // Estado para controlar o menu no mobile
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-
+  // Efeito para detectar scroll e destacar a seção ativa
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
 
-      // Detecta qual seção está visível
-      const sectionElements = sections.map(section => ({
+      const sectionElements = sections.map((section) => ({
         id: section,
-        element: document.getElementById(section)
+        element: document.getElementById(section),
       }));
 
       const currentSection = sectionElements.find(({ element }) => {
@@ -38,7 +36,21 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Função para alternar o menu no mobile
+  // Função para scroll suave com offset
+  const smoothScroll = (targetId) => {
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      const offset = 100; // Ajuste o valor conforme a altura do cabeçalho
+      const targetPosition = targetElement.offsetTop - offset;
+      window.scrollTo({
+        top: targetPosition,
+        behavior: "smooth",
+      });
+    }
+    setIsMenuOpen(false); // Fechar o menu no mobile após o clique
+  };
+
+  // Alternar menu mobile
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -46,24 +58,28 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-[#0a1f44]" : "bg-transparent"
+        isScrolled ? "bg-[#0a1f44]" : "bg-[#0a1f44]/90"
       }`}
+      style={{ height: "80px" }} // Altura fixa do cabeçalho
     >
-      <div className="absolute inset-0 opacity-50 pointer-events-none"></div>
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+        <div className="flex justify-between items-center h-full">
           <div className="flex items-center">
-            <Image src="/logo_footer.png" alt="EJ Turing" width={150} height={150} />
+            <Image
+              src="/logo_footer.png"
+              alt="EJ Turing"
+              width={150}
+              height={150}
+              className="h-12"
+            />
           </div>
 
           {/* Botão de menu (hamburger) para dispositivos móveis */}
           <button
-            className={`md:hidden ${isScrolled ? "text-white" : "text-[#0a1f44]"}`}
+            className={`md:hidden text-white`}
             onClick={toggleMenu}
           >
-            {/* Muda o ícone do botão com base no estado isMenuOpen */}
             {isMenuOpen ? (
-              // Ícone "X"
               <svg
                 className="w-6 h-6"
                 fill="none"
@@ -79,7 +95,6 @@ const Navbar = () => {
                 />
               </svg>
             ) : (
-              // Ícone hamburger
               <svg
                 className="w-6 h-6"
                 fill="none"
@@ -103,15 +118,14 @@ const Navbar = () => {
               <a
                 key={index}
                 href={`#${section}`}
+                onClick={() => smoothScroll(section)}
                 className="relative group transition-all duration-300"
               >
                 <span
                   className={`cursor-pointer transition-colors duration-300 
-                    ${isScrolled 
-                      ? "text-white hover:text-yellow-500" 
-                      : "text-[#0a1f44] hover:text-yellow-500"
-                    } 
-                    ${activeSection === section ? "text-yellow-500" : ""}`}
+                    text-white hover:text-yellow-500 ${
+                      activeSection === section ? "text-yellow-500" : ""
+                    }`}
                 >
                   {section.charAt(0).toUpperCase() + section.slice(1)}
                 </span>
@@ -133,9 +147,11 @@ const Navbar = () => {
             <a
               key={index}
               href={`#${section}`}
+              onClick={() => smoothScroll(section)}
               className={`cursor-pointer transition-colors duration-300 
-                ${isScrolled ? "text-white" : "text-[#0a1f44]"}
-                ${activeSection === section ? "text-yellow-500" : "hover:text-yellow-500"}`}
+                text-white ${
+                  activeSection === section ? "text-yellow-500" : "hover:text-yellow-500"
+                }`}
             >
               {section.charAt(0).toUpperCase() + section.slice(1)}
             </a>

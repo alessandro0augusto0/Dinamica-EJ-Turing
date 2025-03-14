@@ -35,12 +35,12 @@ export default function Home() {
       <Navbar />
       
       {/* Seção Início */}
-      <section id="inicio" className="w-full min-h-screen">
+      <section id="inicio" className="w-full min-h-screen pt-20">
         <Main />
       </section>
 
       {/* Seção Sobre */}
-      <section id="sobre" className="w-full bg-gray-100">
+      <section id="sobre" className="w-full bg-gray-100 pt-20">
         <div className="w-full max-w-7xl mx-auto px-4">
           <Sobre />
         </div>
@@ -65,14 +65,14 @@ export default function Home() {
       </section>
 
       {/* Seção Serviços */}
-      <section id="servicos" className="w-full bg-white">
+      <section id="servicos" className="w-full bg-white pt-20">
         <div className="w-full">
           <Services />
         </div>
       </section>
 
       {/* Seção Contato */}
-      <section id="contato" className="w-full bg-gray-100">
+      <section id="contato" className="w-full bg-gray-100 pt-20">
         <div className="w-full max-w-7xl mx-auto px-4 py-4">
           <Contato />
         </div>
