@@ -24,3 +24,58 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply m-0 p-0 box-border;
+  }
+
+  html,
+  body {
+    @apply overflow-x-hidden;
+  }
+
+  body {
+    @apply min-h-screen w-full;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply w-full min-h-[85vh] py-12;
+  }
+
+  .content-wrapper {
+    @apply max-w-7xl mx-auto px-4;
+  }
+
+  .section-title {
+    @apply text-3xl font-bold text-center mb-6 text-[#0a1f44];
+  }
+
+  .section-subtitle {
+    @apply text-2xl font-semibold text-center mb-4 text-[#E0B60E];
+  }
+
+  .card-container {
+    @apply bg-white rounded-lg shadow-lg p-6;
+  }
+
+  .subsection-title {
+    @apply text-2xl font-semibold text-gray-800 mb-6 text-center;
+  }
+
+  .text-content {
+    @apply text-gray-600 leading-relaxed;
+  }
+}
+
+@layer utilities {
+  .section-padding {
+    @apply px-4 py-16;
+  }
+}
