@@ -26,7 +26,7 @@ export default function Contato() {
 
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-start justify-between gap-40">
         
-        <div className="bg-gray-100  p-6 rounded-2xl shadow-lg w-full md:w-1/2 mb-8 md:mb-0" data-aos="fade-up">
+        <div className="bg-gray-100  p-6 rounded-2xl shadow-lg w-full md:w-1/2 mb-8 md:mb-0" data-aos="fade-up-right">
           <h3 className="text-yellow-600 font-semibold text-lg mb-4">
             Fale com a gente!
           </h3>
