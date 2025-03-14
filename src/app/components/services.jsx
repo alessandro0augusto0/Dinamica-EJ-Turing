@@ -42,7 +42,7 @@ const Services = () => {
   return (
     <section className="section-container bg-[#F3F4F6]">
       <div className="content-wrapper">
-        <h2 className="section-title text-[#0a1f44]">Nossos Serviços</h2>
+        <h2 className="section-title text-[#0a1f44] py-8">Nossos Serviços</h2>
         <div className="flex flex-col items-center justify-center">
           <div className="text-center max-w-2xl mx-auto">
             <p className="mt-4 text-[#0a1f44] text-lg">

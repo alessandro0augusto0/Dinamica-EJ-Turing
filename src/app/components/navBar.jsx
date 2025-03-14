@@ -53,7 +53,7 @@ const Navbar = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <Image src="/logo.png" alt="EJ Turing" width={60} height={60} />
+            <Image src="/logo_footer.png" alt="EJ Turing" width={150} height={150} />
           </div>
 
           {/* Botão de menu (hamburger) para dispositivos móveis */}

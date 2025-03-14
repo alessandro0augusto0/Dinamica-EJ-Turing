@@ -41,27 +41,23 @@ export default function Home() {
 
       {/* Seção Sobre */}
       <section id="sobre" className="w-full bg-gray-100">
-        <div className="w-full max-w-7xl mx-auto px-4 py-16">
+        <div className="w-full max-w-7xl mx-auto px-4">
           <Sobre />
         </div>
         
-        <div className="w-full max-w-7xl mx-auto px-4 py-16">
+        <div className="w-full max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-yellow-500 mb-8 text-center">
             Venha nos conhecer e faça parte dessa transformação
           </h2>
           <Carrossel images={ejTuringImages} />
         </div>
         
-        <div className="w-full max-w-7xl mx-auto px-4 py-16">
+        <div className="w-full max-w-7xl mx-auto px-4 py-15">
           <IfSUl />
         </div>
         
-        <div className="w-full max-w-7xl mx-auto px-4 py-16">
-          <About_Eng />
-        </div>
-        
-        <div className="w-full max-w-7xl mx-auto px-4 py-16">
-          <h2 className="text-3xl font-bold text-yellow-500 mb-8 text-center">
+        <div className="w-full max-w-7xl mx-auto px-4 py-4">
+          <h2 className="text-3xl font-bold text-yellow-500 text-center py-10">
             Fotos da WeekEng em parceria com a EJ Turing
           </h2>
           <Carrossel images={weekengImages} />
@@ -77,7 +73,7 @@ export default function Home() {
 
       {/* Seção Contato */}
       <section id="contato" className="w-full bg-gray-100">
-        <div className="w-full max-w-7xl mx-auto px-4 py-16">
+        <div className="w-full max-w-7xl mx-auto px-4 py-4">
           <Contato />
         </div>
       </section>
