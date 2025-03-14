@@ -65,7 +65,7 @@ export default function Home() {
       </section>
 
       {/* Seção Serviços */}
-      <section id="servicos" className="w-full bg-white pt-20">
+      <section id="servicos" className="w-full bg-gray-100 pt-20">
         <div className="w-full">
           <Services />
         </div>
