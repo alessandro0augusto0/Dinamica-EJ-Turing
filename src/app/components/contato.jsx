@@ -44,7 +44,7 @@ export default function Contato() {
         <h2 className="section-title text-[#0a1f44]">Entre em Contato</h2>
         
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-start justify-between gap-8">
-          <div className="card-container w-full md:w-1/2 bg-white p-4">
+          <div className="card-container w-full md:w-1/2 bg-white p-4" data-aos="fade-up-right">
             <h3 className="text-[#0a1f44] font-semibold text-lg mb-3">
               Fale com a gente!
             </h3>

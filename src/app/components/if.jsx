@@ -57,7 +57,7 @@ export default function IfSUl() {
             Engenharia de Computação
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
-            <div className="card-container bg-white shadow-lg rounded-lg overflow-hidden p-6">
+            <div className="card-container bg-white shadow-lg rounded-lg overflow-hidden p-6" data-aos="fade-right">
               <div className="bg-[#162E50] p-3 flex justify-center">
                 <img
                   src="/Eng_branco.png"
@@ -75,7 +75,7 @@ export default function IfSUl() {
               </div>
             </div>
 
-            <div className="card-container bg-white shadow-lg rounded-lg overflow-hidden p-6">
+            <div className="card-container bg-white shadow-lg rounded-lg overflow-hidden p-6" data-aos="fade-left">
               <div className="bg-[#162E50] p-3 flex justify-center">
                 <img src="/EJ.png" alt="Logo EJ Turing" className="h-16" />
               </div>
