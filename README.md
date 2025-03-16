@@ -49,6 +49,9 @@ npm run dev
 ### Acesse o site:
 Abra o navegador e acesse [http://localhost:3000](http://localhost:3000).
 
+Ou acesse o site hospedado no Vercel: [https://dinamica-ej-turing.vercel.app/](https://dinamica-ej-turing.vercel.app/).
+
+
 ## 🎨 Design e Desenvolvimento
 O design do site foi criado com foco na experiência do usuário, utilizando cores e elementos visuais que refletem a identidade da EJ Turing. As animações e transições foram implementadas para proporcionar uma navegação fluida e agradável.
 
@@ -74,6 +77,12 @@ Este projeto está licenciado sob a licença MIT. Consulte o arquivo LICENSE par
 
 ## 🌐 GitHub da Empresa
 Confira o GitHub da EJ Turing para mais projetos e informações: [EJ Turing](https://github.com/EJTuring)
+
+---
+
+## Projeto Dinâmica EJ Turing
+
+O site do projeto está hospedado no Vercel e pode ser acessado [aqui](https://dinamica-ej-turing.vercel.app/).
 
 ---
 
