@@ -99,16 +99,36 @@ export default function Contato() {
               Redes Sociais
             </h3>
             <div className="flex space-x-4 mb-20">
-              <a href="#" className="bg-blue-900 text-white p-3 rounded-full">
+              <a
+                href="https://www.facebook.com/ifpocosoficial/photos/-ifsuldeminas-campus-po%C3%A7os-de-caldas-lan%C3%A7a-aplicativo-de-gest%C3%A3o-empresarial-no-e/1035435288611622/?_rdr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-blue-900 text-white p-3 rounded-full"
+              >
                 <FaFacebookF size={18} />
               </a>
-              <a href="#" className="bg-blue-900 text-white p-3 rounded-full">
+              <a
+                href="https://www.linkedin.com/company/ej-turing-consultoria-e-desenvolvimento/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-blue-900 text-white p-3 rounded-full"
+              >
                 <FaLinkedinIn size={18} />
               </a>
-              <a href="#" className="bg-blue-900 text-white p-3 rounded-full">
+              <a
+                href="https://www.instagram.com/ej_turing/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-blue-900 text-white p-3 rounded-full"
+              >
                 <FaInstagram size={18} />
               </a>
-              <a href="#" className="bg-blue-900 text-white p-3 rounded-full">
+              <a
+                href="https://github.com/EJTuring"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-blue-900 text-white p-3 rounded-full"
+              >
                 <FaGithub size={18} />
               </a>
             </div>
